@@ -53,6 +53,7 @@ export {
 } from './composite-types/rich-text.composite-type';
 export type { CompositeFieldSubFieldName } from './CompositeFieldSubFieldNameType';
 export type { ConfigVariableValue } from './ConfigVariableValue';
+export type { ConfirmationModalCaller } from './ConfirmationModalCaller';
 export { ConnectedAccountProvider } from './ConnectedAccountProvider';
 export { CoreObjectNameSingular } from './CoreObjectNameSingular';
 export { CrudOperationType } from './CrudOperationType';
@@ -128,6 +129,7 @@ export { MessageParticipantRole } from './MessageParticipantRole';
 export type { MetadataGqlOperationSignature } from './MetadataGqlOperationSignature';
 export type { ModifiedProperties } from './ModifiedProperties';
 export type { NavigateOptions } from './NavigateOptions';
+export { NavigationMenuItemType } from './NavigationMenuItemType';
 export type { NonNullableRequired } from './NonNullableRequired';
 export type { Nullable } from './Nullable';
 export type { NullablePartial } from './NullablePartial';
