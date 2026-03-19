@@ -1,0 +1,16 @@
+********* GITHUB **********
+git fetch upstream
+git checkout main
+git merge upstream/main
+
+
+********* DOCKER **********
+git pull
+docker compose -f packages/twenty-docker/docker-compose.yml up -d
+
+
+********* TWENTY **********
+npx nx run twenty-server:database:reset:no-seed
+
+********* PM2 ************
+pm2 start ecosystem.config.js
