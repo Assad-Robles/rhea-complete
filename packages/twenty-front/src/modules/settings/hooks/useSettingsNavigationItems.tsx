@@ -6,7 +6,6 @@ import { currentWorkspaceMemberState } from '@/auth/states/currentWorkspaceMembe
 import { billingState } from '@/client-config/states/billingState';
 import { supportChatState } from '@/client-config/states/supportChatState';
 import { usePermissionFlagMap } from '@/settings/roles/hooks/usePermissionFlagMap';
-import { getDocumentationUrl } from '@/support/utils/getDocumentationUrl';
 import { type NavigationDrawerItemIndentationLevel } from '@/ui/navigation/navigation-drawer/components/NavigationDrawerItem';
 import { useAtomStateValue } from '@/ui/utilities/state/jotai/hooks/useAtomStateValue';
 import { useIsFeatureEnabled } from '@/workspace/hooks/useIsFeatureEnabled';
@@ -21,20 +20,18 @@ import {
   type IconComponent,
   IconCurrencyDollar,
   IconDoorEnter,
-  IconHelpCircle,
   IconHierarchy2,
   IconKey,
   IconLock,
   IconMail,
   IconMessage,
   IconPlug,
-  IconRocket,
   IconServer,
   IconSettings,
   IconSparkles,
   IconUserCircle,
   IconUsers,
-  IconWorld,
+  IconWorld
 } from 'twenty-ui/display';
 import {
   FeatureFlagKey,
@@ -207,12 +204,12 @@ const useSettingsNavigationItems = (): SettingsNavigationSection[] => {
           Icon: IconServer,
           isHidden: !isAdminEnabled,
         },
-        {
-          label: t`Updates`,
-          path: SettingsPath.Updates,
-          Icon: IconRocket,
-          isHidden: !permissionMap[PermissionFlagType.WORKSPACE],
-        },
+        // {
+        //   label: t`Updates`,
+        //   path: SettingsPath.Updates,
+        //   Icon: IconRocket,
+        //   isHidden: !permissionMap[PermissionFlagType.WORKSPACE],
+        // },
         {
           label: t`Support`,
           onClick: () => window.FrontChat?.('show'),
